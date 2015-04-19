@@ -1,9 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-
 <div class="col-md-3 col-xs-3">
 	<div id="column-left">
-		<ul class="category_title">
+		<ul class="category_title hidden-sm">
 			<li>Categories</li>
 		</ul>
 	</div>

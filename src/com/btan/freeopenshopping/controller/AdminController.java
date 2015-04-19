@@ -21,22 +21,56 @@ public class AdminController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String login(ModelMap modelMap) {
-		modelMap.put("user", new User());
+		modelMap.put("objUser", new User());
 		modelMap.put("title", "Admin Login");
 		return "adminlogin";
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String login(@ModelAttribute(value = "user") User user, 
+	public String login(@ModelAttribute(value = "objUser") User objUser, 
 			ModelMap modelMap) {
-		
-		User objUser = userService.verifyUser(user.getEmail(), user.getPassword());
-		if (objUser == null) {
-			//modelMap.put("user", new User("null", "null"));
-		} else {
-			//modelMap.put("user", objUser);
+		boolean result = userService.login(objUser.getEmail(), objUser.getPassword(), 1);
+		if (result) {
+			modelMap.put("title", "FreeOpenShopping Admin");
+			return "dashboard";
 		}
 		modelMap.put("title", "Admin Login");
 		return "adminlogin";
+	}
+	
+	/**
+	 * Category Management page
+	 */
+	@RequestMapping(value = "categorymgr", method = RequestMethod.GET)
+	public String categoryMgr(ModelMap modelMap) {
+		modelMap.put("title", "FreeOpenShopping Admin - Category Management");
+		return "admincategory";
+	}
+	
+	/**
+	 * Product Management page
+	 */
+	@RequestMapping(value = "productmgr", method = RequestMethod.GET)
+	public String productMgr(ModelMap modelMap) {
+		modelMap.put("title", "FreeOpenShopping Admin - Product Management");
+		return "adminproduct";
+	}
+	
+	/**
+	 * Order Management page
+	 */
+	@RequestMapping(value = "ordermgr", method = RequestMethod.GET)
+	public String orderMgr(ModelMap modelMap) {
+		modelMap.put("title", "FreeOpenShopping Admin - Order Management");
+		return "adminorder";
+	}
+	
+	/**
+	 * User Management page
+	 */
+	@RequestMapping(value = "usermgr", method = RequestMethod.GET)
+	public String userMgr(ModelMap modelMap) {
+		modelMap.put("title", "FreeOpenShopping Admin - User Management");
+		return "adminuser";
 	}
 }

@@ -37,9 +37,9 @@
 	          <h1 class="text-center">Login</h1>
 	      </div>
 	      <div class="modal-body">
-	          <s:form class="form col-md-12 center-block" method="post" commandName="user" action="admin.html">
+	          <s:form class="form col-md-12 center-block" method="post" commandName="objUser" action="admin.html">
 	            <div class="form-group">
-	              <s:input type="text" class="form-control input-lg" placeholder="Username" path="username" />
+	              <s:input type="text" class="form-control input-lg" placeholder="Email" path="email" />
 	            </div>
 	            <div class="form-group">
 	              <s:input type="password" class="form-control input-lg" placeholder="Password" path="password"/>

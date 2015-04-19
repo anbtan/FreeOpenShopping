@@ -30,4 +30,24 @@
     	<put-attribute name="content" value="/WEB-INF/jsp/usersignin.jsp" />
     </definition>
     
+    
+    <definition name="dashboard" template="/WEB-INF/jsp/templates/admintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/categorymgr.jsp" />
+    </definition>
+    
+    <definition name="admincategory" template="/WEB-INF/jsp/templates/admintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/categorymgr.jsp" />
+    </definition>
+    
+    <definition name="adminproduct" template="/WEB-INF/jsp/templates/admintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/productmgr.jsp" />
+    </definition>
+    
+    <definition name="adminorder" template="/WEB-INF/jsp/templates/admintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/ordermgr.jsp" />
+    </definition>
+    
+    <definition name="adminuser" template="/WEB-INF/jsp/templates/admintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/usermgr.jsp" />
+    </definition>
 </tiles-definitions>
