@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+    
+    <definition name="index" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    
+    <definition name="aboutus" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/aboutus.jsp" />
+    </definition>
+    
+    <definition name="news" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/news.jsp" />
+    </definition>
+    
+    <definition name="adminlogin" template="/WEB-INF/jsp/templates/logintemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/adminlogin.jsp" />
+    </definition>
+    
+    
+    <definition name="signup" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/usersignup.jsp" />
+    </definition>
+    
+    <definition name="signin" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/usersignin.jsp" />
+    </definition>
+    
+</tiles-definitions>
