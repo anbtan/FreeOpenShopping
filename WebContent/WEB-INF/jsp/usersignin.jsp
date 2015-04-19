@@ -7,11 +7,15 @@
 	</div>
 	<br/>
 	<div class=row>
-		<form class="form-horizontal">
+		
+		<s:form class="form-horizontal" method="post" action="signin.html" commandName="objUser">
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-4"><div class="alert alert-danger ${show }" role="alert"><strong>${message }</strong></div></div>
+			</div>
 			<div class="form-group">
 				<label for="inputEmail" class="col-sm-4 control-label">Email</label>
 			    <div class="col-sm-4">
-			    	<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+			    	<s:input type="email" class="form-control" id="inputEmail" placeholder="Email" path="email" />
 			    </div>
 			    <div class="col-sm-4"></div>
 			</div>
@@ -19,16 +23,16 @@
 			<div class="form-group">
 				<label for="inputPassword" class="col-sm-4 control-label">Password</label>
 			    <div class="col-sm-4">
-			    	<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+			    	<s:input type="password" class="form-control" id="inputPassword" placeholder="Password" path="password" />
 			    </div>
 			    <div class="col-sm-4"></div>
 			</div>
 			
 			<div class="form-group">
 				<div class="col-sm-offset-4 col-sm-4">
-			    	<button type="submit" class="btn btn-default">Sign in</button>
+			    	<button type="submit" class="btn btn-primary">Sign in</button>
 			    </div>
 			</div>
-		</form>
+		</s:form>
 	</div>
 </div>

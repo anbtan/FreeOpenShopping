@@ -30,11 +30,11 @@ public class AdminController {
 	public String login(@ModelAttribute(value = "user") User user, 
 			ModelMap modelMap) {
 		
-		User objUser = userService.verifyUser(user.getUsername(), user.getPassword());
+		User objUser = userService.verifyUser(user.getEmail(), user.getPassword());
 		if (objUser == null) {
-			modelMap.put("user", new User("null", "null"));
+			//modelMap.put("user", new User("null", "null"));
 		} else {
-			modelMap.put("user", objUser);
+			//modelMap.put("user", objUser);
 		}
 		modelMap.put("title", "Admin Login");
 		return "adminlogin";

@@ -46,13 +46,11 @@
 	            </div>
 	            <div class="form-group">
 	              <button class="btn btn-primary btn-lg btn-block">Sign In</button>
-	              <%-- <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span> --%>
 	            </div>
 	          </s:form>
 	      </div>
 	      <div class="modal-footer" style="border-width: 0px;">
 	          <div class="col-md-12">
-	          <!-- <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>  -->
 			  </div>	
 	      </div>
 	  </div>

@@ -11,9 +11,27 @@ public class UserServiceImpl implements UserService {
 	UserDao userDao;
 	
 	@Override
-	public User verifyUser(String username, String password) {
+	public User verifyUser(String email, String password) {
 		// TODO Auto-generated method stub
-		return userDao.verifyUser(username, password);
+		return userDao.verifyUser(email, password);
+	}
+
+	@Override
+	public boolean registerUser(User user) {
+		// TODO Auto-generated method stub
+		return userDao.registerUser(user);
+	}
+
+	@Override
+	public boolean isExistedUser(String email) {
+		// TODO Auto-generated method stub
+		return userDao.isExistedUser(email);
+	}
+
+	@Override
+	public boolean login(String email, String password, int role) {
+		// TODO Auto-generated method stub
+		return userDao.login(email, password, role);
 	}
 
 }
