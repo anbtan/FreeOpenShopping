@@ -17,7 +17,7 @@ import com.btan.freeopenshopping.validator.UserValidator;
 public class UserController {
 	
 	@Autowired  
-	UserService userService; 
+	UserService userService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap modelMap) {

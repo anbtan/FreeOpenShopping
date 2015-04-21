@@ -1,3 +1,2 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-About us page
+<h1>Hello world!</h1> 
+<P>The time on the server is </P>

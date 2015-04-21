@@ -73,6 +73,8 @@
              
     <bean id="userDao" class="com.btan.freeopenshopping.dao.UserDaoImpl" />
     <bean id="userService" class="com.btan.freeopenshopping.services.UserServiceImpl" />
+    <bean id="cateDao" class="com.btan.freeopenshopping.dao.CategoryImpl" />
+    <bean id="adminService" class="com.btan.freeopenshopping.services.AdminServiceImpl" />
     
 	<!-- declare datasource bean -->  
  	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  

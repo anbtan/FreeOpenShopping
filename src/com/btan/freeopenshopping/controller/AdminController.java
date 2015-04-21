@@ -19,6 +19,9 @@ public class AdminController {
 	@Autowired  
 	UserService userService;  
 	
+	@Autowired
+	AdminService adminService;
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public String login(ModelMap modelMap) {
 		modelMap.put("objUser", new User());
@@ -44,6 +47,7 @@ public class AdminController {
 	@RequestMapping(value = "categorymgr", method = RequestMethod.GET)
 	public String categoryMgr(ModelMap modelMap) {
 		modelMap.put("title", "FreeOpenShopping Admin - Category Management");
+		modelMap.put("cateList", adminService.getAll());
 		return "admincategory";
 	}
 	
