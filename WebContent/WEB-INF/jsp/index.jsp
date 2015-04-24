@@ -1,3 +1,51 @@
+<div class="row">
+	<!-- Slider -->
+  	<div class="col-lg-12 col-md-12">
+	    <div class="slider">
+    	    <div class="bx-wrapper">
+    	    	<div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative;">
+    	    		<ul class="bxslider" style="position: relative; -webkit-transition-duration: 0s; transition-duration: 0s; -webkit-transform: translate3d(-878px, 0px, 0px);">
+    	    			<li style="float: left; list-style: none; position: relative; width: 838px;" class="bx-clone">
+                            <a href="index.html">
+                            	<img src="${pageContext.request.contextPath}/resources/images/banner_slider-3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li style="float: left; list-style: none; position: relative; width: 838px;">
+                            <a href="index.html">
+                                <img src="${pageContext.request.contextPath}/resources/images/banner_slider-3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li style="float: left; list-style: none; position: relative; width: 838px;">
+                            <a href="index.html">
+                                <img src="${pageContext.request.contextPath}/resources/images/banner_slider-3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li style="float: left; list-style: none; position: relative; width: 838px;">
+                            <a href="index.html">
+                                <img src="${pageContext.request.contextPath}/resources/images/banner_slider-3.jpg" alt="">
+                            </a>
+                        </li>
+                    	<li style="float: left; list-style: none; position: relative; width: 838px;" class="bx-clone">
+                            <a href="index.html">
+                                <img src="${pageContext.request.contextPath}/resources/images/banner_slider-3.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            <div class="bx-controls bx-has-controls-direction">
+        <div class="bx-controls-direction">
+    		<a class="bx-prev" href="">Prev</a>
+    		<a class="bx-next" href="">Next</a>
+    	</div>
+    </div>
+</div>
+                </div>
+            </div>
+    <!-- End Slider -->
+</div>
+
+
+
 <div class="col-md-3 col-xs-3">
 	<div id="column-left">
 		<ul class="category_title hidden-sm">

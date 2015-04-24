@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.btan.freeopenshopping.entities.Category;
 import com.btan.freeopenshopping.entities.User;
 import com.btan.freeopenshopping.services.*;
 
@@ -48,6 +49,7 @@ public class AdminController {
 	public String categoryMgr(ModelMap modelMap) {
 		modelMap.put("title", "FreeOpenShopping Admin - Category Management");
 		modelMap.put("cateList", adminService.getAll());
+		modelMap.put("objCategory", new Category());
 		return "admincategory";
 	}
 	

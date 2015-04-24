@@ -11,12 +11,17 @@ The main layout
   max-width: 940px;
 }
 body {
-  padding-bottom: 40px;
-  padding-top: 10px;
+  font-family: 'source_sans_proregular';
+  color: #333;
+  background: #f1f1f1;
 }
 /*
 The footer
 */
+footer {
+	color: #eee;
+  	background: #313131;
+}
 footer h4 {
   margin-bottom: 5px;
 }
@@ -324,6 +329,11 @@ input.button:hover {
 /*
 Styles in the header to keep the same as the first version. This can be deleted for other swatches
 */
+.navbar {
+	background: #4a4a4a;
+  	margin-bottom: 0;
+  	border-color: #333;
+}
 .navbar-collapse {
   padding-right: 0;
   padding-left: 0;

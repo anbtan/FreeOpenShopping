@@ -6,102 +6,111 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>${title }</title>
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/stylesheet.css"/>
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css"/>
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/theme.css"/>
+<!-- Custom Fonts -->
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" >
+<!-- Custom Fonts -->
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.bxslider.css" >
+
 </head>
 <body>
-	<div class="container">
-		<div id="header" class="row">
-			<div class="col-md-4 col-xs-4 logo">
-            	<a href="${pageContext.request.contextPath }/user.html">
-                	<img src="${pageContext.request.contextPath}/resources/images/logo.png" title="Your Store" alt="Your Store">
-               	</a>
-            </div>
-			<div class="col-md-8 col-xs-8">
-				<div class="row" style="height: 75px;">
-				</div>
-				<br></br>
-				<div class="row">
-					<div class="links pull-right">
-						<a href="${pageContext.request.contextPath }/user/signup.html">Sign up</a>
-						<a href="${pageContext.request.contextPath }/user/signin.html">Sign in</a>
-						<a href="${pageContext.request.contextPath }/user.html">Wish List(0)</a> 
-						<a href="${pageContext.request.contextPath }/user/aboutus.html">Shopping Cart</a> 
-						<a href="${pageContext.request.contextPath }/user/news.html">Checkout</a>
-						
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-xs-4 logo">
+	            	<a href="${pageContext.request.contextPath }/user.html">
+	                	<img src="${pageContext.request.contextPath}/resources/images/logo.png" title="Your Store" alt="Your Store">
+	               	</a>
+            	</div>
+				<div class="col-md-8 col-xs-8">
+					<div class="row" style="height: 75px;"></div>
+					<br></br>
+					<div class="row">
+						<div class="links pull-right">
+							<a href="${pageContext.request.contextPath }/user/signup.html">Sign up</a>
+							<a href="${pageContext.request.contextPath }/user/signin.html">Sign in</a>
+							<a href="${pageContext.request.contextPath }/user.html">Wish List(0)</a> 
+							<a href="${pageContext.request.contextPath }/user/aboutus.html">Shopping Cart</a> 
+							<a href="${pageContext.request.contextPath }/user/news.html">Checkout</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="navbar" class="row">
-			<div class="col-md-12">
-				<nav class="navbar navbar-default" role="navigation">
-					<ul class="nav navbar-nav">
-						<li><a href="${pageContext.request.contextPath }/user.html">Home</a></li>
-						<li><a href="${pageContext.request.contextPath }/user/aboutus.html">About Us</a></li>
-						<li><a href="${pageContext.request.contextPath }/user/news.html">News</a></li>
-					</ul>
-				</nav> 
-			</div>
-		</div>
-		<div id="content" class="row">
-			<tiles:insertAttribute name="content"></tiles:insertAttribute>
-		</div>
-		<div class="row footer">
-			<footer>
-				<hr></hr>
-				<div class="row well no_margin_left">
-            		<div class="col-sm-3 col-xs-6">
-                		<div class="column">
-		                    <h4>Information</h4>
-                    		<ul>            
-		                        <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/information&amp;information_id=4">About Us</a></li>
-		                        <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/information&amp;information_id=6">Delivery Information</a></li>
-		                        <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/information&amp;information_id=3">Privacy Policy</a></li>
-		                        <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions</a></li>
-		                    </ul>
-        		        </div>
-		            </div>
-            
-		            <div class="col-sm-3 col-xs-6">
-		                <h4>Customer Service</h4>
-		                <ul>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/contact">Contact Us</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/return/insert">Returns</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=information/sitemap">Site Map</a></li>
-		                </ul>
-		            </div>
-            
-            		<div class="col-xs-12 visible-xs"></div>
-            
-		            <div class="col-sm-3 col-xs-6">
-		                <h4>Extras</h4>
-		                <ul>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=product/manufacturer">Brands</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/voucher">Gift Vouchers</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=affiliate/account">Affiliates</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=product/special">Specials</a></li>
-		                </ul>
-		            </div>
-            
-		            <div class="col-sm-2 col-xs-6">
-		                <h4>My Account</h4>
-		                <ul>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/account">My Account</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/order">Order History</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/wishlist">Wish List</a></li>
-		                    <li><a href="http://demo-opencart.expresspixel.com/index.php?route=account/newsletter">Newsletter</a></li>
-		                </ul>
-		            </div>
-            
+	</header>
+	<!-- End Header -->
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="${pageContext.request.contextPath }/user.html">Home</a></li>
+					<li><a href="${pageContext.request.contextPath }/user/aboutus.html">About Us</a></li>
+					<li><a href="${pageContext.request.contextPath }/user/news.html">News</a></li>
+                </ul>
+            </div>
         </div>
-			<p>&copy; Company 2015</p>
-			</footer>
-		</div>
-		
-		
+    </nav>
+    <!-- End Navigation -->
+    <!-- Content -->
+	<div class="container main-container">
+		<tiles:insertAttribute name="content"></tiles:insertAttribute>
 	</div>	
+	<!-- End Content -->
+	<!-- Footer -->
+	<footer>
+    	<div class="container">
+        	<div class="col-lg-3 col-md-3 col-sm-6">
+        		<div class="column">
+        			<h4>Information</h4>
+        			<ul>
+        				<li><a href="about.html">About Us</a></li>
+        				<li><a href="typography.html">Policy Privacy</a></li>
+        				<li><a href="typography.html">Terms and Conditions</a></li>
+        				<li><a href="typography.html">Shipping Methods</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 col-md-3 col-sm-6">
+        		<div class="column">
+        			<h4>Categories</h4>
+        			<ul>
+        				<li><a href="catalogue.html">Cras justo odio</a></li>
+        				<li><a href="catalogue.html">Dapibus ac facilisis in</a></li>
+        				<li><a href="catalogue.html">Morbi leo risus</a></li>
+        				<li><a href="catalogue.html">Porta ac consectetur ac</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 col-md-3 col-sm-6">
+        		<div class="column">
+        			<h4>Customer Service</h4>
+        			<ul>
+        				<li><a href="contact.html">Contact Us</a></li>
+        				<li><a href="#">YM: cs_</a></li>
+        				<li><a href="#">Phone: +6281234567891</a></li>
+        				<li><a href="#">Email: cs.domain@domain.tld</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 col-md-3 col-sm-6">
+        		<div class="column">
+        			<h4>Follow Us</h4>
+        			<ul class="social">
+        				<li><a href="#">Google Plus</a></li>
+        				<li><a href="#">Facebook</a></li>
+        				<li><a href="#">Twitter</a></li>
+        				<li><a href="#">RSS Feed</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+        <div class="navbar-inverse text-center copyright">
+        	Copyright © 2015 Mimity All right reserved
+        </div>
+    </footer>
+    <!-- End Footer -->
 </body>
 </html>

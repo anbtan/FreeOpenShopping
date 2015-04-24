@@ -6,10 +6,10 @@
     	</h1>
     	<ol class="breadcrumb">
         	<li>
-            	<i class="fa fa-dashboard"></i>  <a href="${pageContext.request.contextPath }/admin/dashboard.html">Dashboard</a>
+            	<i class="fa fa-dashboard"></i> Dashboard
         	</li>
         	<li class="active">
-            	<i class="fa fa-file"></i>Product Management
+            	<i class="fa fa-file"></i> Product Management
         	</li>
     	</ol>
 	</div>
