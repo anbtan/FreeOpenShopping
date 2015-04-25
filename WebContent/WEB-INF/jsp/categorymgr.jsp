@@ -77,12 +77,12 @@
       	<div class="modal-body">
         	<s:form class="form col-md-12 center-block" method="post" commandName="objCategory" action="admin.html">
 	            <div class="form-group">
-	            	<label class="col-sm-2 control-label">Category name: </label>
+	            	<label class="control-label">Category name: </label>
 	              	<s:input type="text" class="form-control input-lg" placeholder="Category name" path="name" />
 	            </div>
 	            <div class="form-group">
-	            	<label class="col-sm-2 control-label">Description: </label>
-	              	<s:input type="textarea" class="form-control input-lg" placeholder="Description" path="description"/>
+	            	<label class="control-label">Description: </label>
+	              	<s:textarea path="description" placeholder="Description" class="form-control input-lg" rows="1" cols="1"/>
 	            </div>
 	            <div class="modal-footer">
 		        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -90,6 +90,9 @@
       			</div>
 	    	</s:form>
       	</div>
+      	<div class="modal-footer" style="border-width: 0px;">
+	          <div class="col-md-12"></div>	
+	      </div>
     </div>
 </div>
 <!-- /.End dialog -->
