@@ -23,10 +23,15 @@ public class AdminController {
 	@Autowired
 	AdminService adminService;
 	
+	/**
+	 * Admin Login Page
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String login(ModelMap modelMap) {
 		modelMap.put("objUser", new User());
-		modelMap.put("title", "Admin Login");
+		modelMap.put("title", "FOS - Admin Login");
 		return "adminlogin";
 	}
 	
@@ -35,15 +40,20 @@ public class AdminController {
 			ModelMap modelMap) {
 		boolean result = userService.login(objUser.getEmail(), objUser.getPassword(), 1);
 		if (result) {
-			modelMap.put("title", "FreeOpenShopping Admin");
-			return "dashboard";
+			modelMap.put("cateList", adminService.getAll());
+			modelMap.put("objCategory", new Category());
+			modelMap.put("title", "FOS - Category Management");
+			return "admincategory";
+		} else {
+			modelMap.put("title", "FOS - Admin Login");
+			return "adminlogin";
 		}
-		modelMap.put("title", "Admin Login");
-		return "adminlogin";
 	}
 	
 	/**
 	 * Category Management page
+	 * @param modelMap
+	 * @return
 	 */
 	@RequestMapping(value = "categorymgr", method = RequestMethod.GET)
 	public String categoryMgr(ModelMap modelMap) {
@@ -55,6 +65,8 @@ public class AdminController {
 	
 	/**
 	 * Product Management page
+	 * @param modelMap
+	 * @return
 	 */
 	@RequestMapping(value = "productmgr", method = RequestMethod.GET)
 	public String productMgr(ModelMap modelMap) {
@@ -64,6 +76,8 @@ public class AdminController {
 	
 	/**
 	 * Order Management page
+	 * @param modelMap
+	 * @return
 	 */
 	@RequestMapping(value = "ordermgr", method = RequestMethod.GET)
 	public String orderMgr(ModelMap modelMap) {
@@ -73,6 +87,8 @@ public class AdminController {
 	
 	/**
 	 * User Management page
+	 * @param modelMap
+	 * @return
 	 */
 	@RequestMapping(value = "usermgr", method = RequestMethod.GET)
 	public String userMgr(ModelMap modelMap) {

@@ -50,4 +50,9 @@
     <definition name="adminuser" template="/WEB-INF/jsp/templates/admintemplate.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/usermgr.jsp" />
     </definition>
+    
+    <!-- Product detail -->
+    <definition name="detail" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/detail.jsp" />
+    </definition>
 </tiles-definitions>

@@ -21,7 +21,7 @@ public class UserController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap modelMap) {
-		modelMap.put("title", "Home");
+		modelMap.put("title", "Free Open Shopping");
 		return "index";
 	}
 
@@ -37,6 +37,11 @@ public class UserController {
 		return "news";
 	}
 	
+	/**
+	 * Sign Up page
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "signup", method = RequestMethod.GET)
 	public String signup(ModelMap modelMap) {
 		modelMap.put("objUser", new User());
@@ -79,6 +84,11 @@ public class UserController {
 		}
 	}
 	
+	/**
+	 * Sign in page
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "signin", method = RequestMethod.GET)
 	public String signin(ModelMap modelMap) {
 		modelMap.put("objUser", new User("",""));
@@ -107,4 +117,10 @@ public class UserController {
 		}
 		
 	}
+	
+	@RequestMapping(value = "detail", method = RequestMethod.GET)
+	public String detail() {
+		return "detail";
+	}
+	
 }

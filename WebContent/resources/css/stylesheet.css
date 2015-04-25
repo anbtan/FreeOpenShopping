@@ -427,7 +427,7 @@ footer .copyright{
 
 .product-thumb-image{ padding: 2px }
 .product-main-image, .product-thumb-image .thumbnail{ margin-bottom: 0 }
-.product-main-image{ cursor: zoom-in; cursor: -webkit-zoom-in; cursor: -moz-zoom-in }
+.product-main-image-detail{ cursor: zoom-in; cursor: -webkit-zoom-in; cursor: -moz-zoom-in }
 .product-main-image-container{ position: relative }
 .product-loader{
 	position: absolute;

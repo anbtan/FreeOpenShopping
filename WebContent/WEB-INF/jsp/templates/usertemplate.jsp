@@ -1,7 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -20,20 +17,23 @@
 		<div class="container">
 			<div class="row">
 				<!-- Logo -->
-				<div class="col-md-4 col-xs-4 logo">
-	            	<a href="${pageContext.request.contextPath }/user.html">
-	                	<img src="${pageContext.request.contextPath}/resources/images/logo.png" title="Your Store" alt="Your Store">
-	               	</a>
-            	</div>
+				<div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+	            	<div class="well logo">
+	            		<a href="${pageContext.request.contextPath }/user/index.html">
+	            			Free <span>Open Shopping</span>
+	            		</a>
+	            		<div>Bring everything to your house within one music node</div>
+	            	</div>
+	            </div>
             	<!-- End Logo -->
 				<!-- Search -->
 				<div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
 	            	<div class="well">
-	                    <form action="">
+	                   <form action="">
 	                        <div class="input-group">
 	                            <input type="text" class="form-control input-search" placeholder="Enter something to search">
 	                            <span class="input-group-btn">
-	                                <button class="btn btn-default no-border-left" type="submit"><i class="fa fa-search"></i></button>
+	                                <button class="btn btn-default no-border-left" type="submit"><i class="fa fa-search"></i> Search</button>
 	                            </span>
 	                        </div>
 	                    </form>
@@ -71,7 +71,6 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-xs-12">
-					<br></br>
 					<div class="row">
 						<div class="links pull-right">
 							<a href="${pageContext.request.contextPath }/user/signup.html">Sign up</a>
@@ -83,6 +82,8 @@
 					</div>
 				</div>
 			</div>
+			
+			
 		</div>
 	</header>
 	<!-- End Header -->
@@ -91,7 +92,7 @@
         <div class="container">
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="${pageContext.request.contextPath }/user.html">Home</a></li>
+                    <li><a href="${pageContext.request.contextPath }/user/index.html">Home</a></li>
 					<li><a href="${pageContext.request.contextPath }/user/aboutus.html">About Us</a></li>
        				<li><a href="${pageContext.request.contextPath }/user/aboutus.html">Policy Privacy</a></li>
        				<li><a href="${pageContext.request.contextPath }/user/aboutus.html">Terms and Conditions</a></li>
@@ -151,64 +152,64 @@
 			<div class="panel panel-default">
 			    <div class="panel-heading have-sub">
 			        <h4 class="panel-title">
-			        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Cras justo odio</a>
-			        <i class="fa fa-caret-right"></i></h4>
+			        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Category 1</a>
+			        </h4>
 			    </div>
 			    <div id="collapseOne" class="panel-collapse collapse">
 			        <div class="list-group">
-			            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-			            <a href="#" class="list-group-item">Morbi leo risus</a>
+			            <a href="#" class="list-group-item">Sub Category 1</a>
+			            <a href="#" class="list-group-item">Sub Category 2</a>
 			        </div>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Dapibus ac facilisis in</a>
+			        	<a href="#">Category 2</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading have-sub">
 			        <h4 class="panel-title">
-			        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Porta ac consectetur ac</a>
-			        <i class="fa fa-caret-right"></i></h4>
+			        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Category 3</a>
+			        </h4>
 			    </div>
 			    <div id="collapseTwo" class="panel-collapse collapse">
 			        <div class="list-group">
-			            <a href="#" class="list-group-item">Vestibulum at eros</a>
-			            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+			            <a href="#" class="list-group-item">Sub Category 3</a>
+			            <a href="#" class="list-group-item">Sub Category 3</a>
 			        </div>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Vestibulum at eros</a>
+			        	<a href="#">Category 4</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Porta ac consectetur ac</a>
+			        	<a href="#">Category 5</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Cras justo odio</a>
+			        	<a href="#">Category 6</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Dapibus ac facilisis in</a>
+			        	<a href="#">Category 7</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Porta ac consectetur ac</a>
+			        	<a href="#">Category 8</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Vestibulum at eros</a>
+			        	<a href="#">Category 9</a>
 			        </h4>
 			    </div>
 			    <div class="panel-heading">
 			        <h4 class="panel-title">
-			        	<a href="#">Porta ac consectetur ac</a>
+			        	<a href="#">Category 10</a>
 			        </h4>
 			    </div>
 			</div>
@@ -223,36 +224,38 @@
 		</div>
 		<div class="hero-feature">
 	        <div class="thumbnail text-center">
-	        	<a href="detail.html" class="link-p" style="overflow: hidden; position: relative;">
-	            	<img src="${pageContext.request.contextPath}/resources/images/product-10.jpg" alt="" style="position: absolute; width: 250px; height: auto; max-width: none; max-height: none; left: -13px; top: 0px;">
-	        	</a>
-	  	        <div class="caption prod-caption">
-			        <h4><a href="detail.html">Penn State College T-Shirt</a></h4>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
-		            <p></p>
-		            <div class="btn-group">
-		            	<a href="#" class="btn btn-default">$ 528.96</a>
-		                <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>
-		            </div>
-		            <p></p>
-		        </div>
+	        	<a href="${pageContext.request.contextPath }/user/detail.html" class="link-p" style="overflow: hidden; position: relative;">
+		    		<img src="${pageContext.request.contextPath}/resources/images/product-10.jpg" alt="" style="position: absolute; width: 250px; height: auto; max-width: none; max-height: none; left: -4px; top: 0px;">
+		    	</a>
+			    <div class="caption prod-caption">
+			    	<h4><a href="detail.html">Age Of Wisdom Tan Graphic Tee</a></h4>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
+			        <p></p>
+			        <h3 style="color: red;"><strong>$ 122.51</strong></h3>
+			        <div class="btn-group">
+				        <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>      
+				        <a href="#" class="btn btn-success"><i class="fa fa-heart"></i> Add Wishlist</a>
+			        </div>
+			        <p></p>
+			    </div>
 	        </div>
 		</div>
         <div class="hero-feature hidden-sm">
             <div class="thumbnail text-center">
-            	<a href="detail.html" class="link-p" style="overflow: hidden; position: relative;">
-                	<img src="${pageContext.request.contextPath}/resources/images/product-10.jpg" alt="" style="position: absolute; width: 280px; height: auto; max-width: none; max-height: none; left: -28px; top: 0px;">
-            	</a>
-                <div class="caption prod-caption">
-                    <h4><a href="detail.html">Ohio State College T-Shirt</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
-                    <p>
-                    	</p><div class="btn-group">
-                     	<a href="#" class="btn btn-default">$ 924.25</a>
-                     	<a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>
-                    	</div>
-                    <p></p>
-                </div>
+            	<a href="${pageContext.request.contextPath }/user/detail.html" class="link-p" style="overflow: hidden; position: relative;">
+		    		<img src="${pageContext.request.contextPath}/resources/images/product-10.jpg" alt="" style="position: absolute; width: 250px; height: auto; max-width: none; max-height: none; left: -4px; top: 0px;">
+		    	</a>
+			    <div class="caption prod-caption">
+			    	<h4><a href="detail.html">Age Of Wisdom Tan Graphic Tee</a></h4>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, minima!</p>
+			        <p></p>
+			        <h3 style="color: red;"><strong>$ 122.51</strong></h3>
+			        <div class="btn-group">
+				        <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy</a>      
+				        <a href="#" class="btn btn-success"><i class="fa fa-heart"></i> Add Wishlist</a>
+			        </div>
+			        <p></p>
+			    </div>
             </div>
         </div>
 	</div>
@@ -261,7 +264,6 @@
 	<div class="clearfix visible-sm"></div>
 <!-- Featured -->
 <div class="col-lg-9 col-md-9 col-sm-12">
-	
 		<tiles:insertAttribute name="content"></tiles:insertAttribute>
 	</div>
 </div>
@@ -309,7 +311,7 @@
         </div>
     </footer>
     <!-- End Footer -->
-    
+  
     <!-- jQuery -->
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 
