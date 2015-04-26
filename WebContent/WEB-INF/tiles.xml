@@ -9,9 +9,7 @@
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
     </definition>
     
-    <definition name="aboutus" template="/WEB-INF/jsp/templates/usertemplate.jsp">
-        <put-attribute name="content" value="/WEB-INF/jsp/aboutus.jsp" />
-    </definition>
+    
     
     <definition name="news" template="/WEB-INF/jsp/templates/usertemplate.jsp">
         <put-attribute name="content" value="/WEB-INF/jsp/news.jsp" />
@@ -55,4 +53,30 @@
     <definition name="detail" template="/WEB-INF/jsp/templates/usertemplate.jsp">
         <put-attribute name="content" value="/WEB-INF/jsp/detail.jsp" />
     </definition>
+    
+    <!-- About Us -->
+    <definition name="aboutus" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/aboutus.jsp" />
+    </definition>
+    
+    <!-- Policy Privacy -->
+    <definition name="policy" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/policy.jsp" />
+    </definition>
+    
+    <!-- Term and Condition -->
+    <definition name="termcondition" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/termcondition.jsp" />
+    </definition>
+    
+    <!-- Shipping Methods -->
+    <definition name="shippingmethod" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/shippingmethod.jsp" />
+    </definition>
+    
+    <!-- Contact Us -->
+    <definition name="contactus" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/contactus.jsp" />
+    </definition>
+    
 </tiles-definitions>

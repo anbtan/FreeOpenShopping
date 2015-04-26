@@ -19,22 +19,76 @@ public class UserController {
 	@Autowired  
 	UserService userService;
 	
+	/**
+	 * Index page
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(ModelMap modelMap) {
 		modelMap.put("title", "Free Open Shopping");
+		modelMap.put("cateTree", userService.getCategoryTree());
 		return "index";
 	}
 
+	/**
+	 * About Us page
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "aboutus", method = RequestMethod.GET)
 	public String aboutus(ModelMap modelMap) {
 		modelMap.put("title", "About us");
+		modelMap.put("cateTree", userService.getCategoryTree());
 		return "aboutus";
 	}
 	
-	@RequestMapping(value = "news", method = RequestMethod.GET)
-	public String news(ModelMap modelMap) {
-		modelMap.put("title", "News");
-		return "news";
+	/**
+	 * Policy Privacy page
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "policy", method = RequestMethod.GET)
+	public String policy(ModelMap modelMap) {
+		modelMap.put("title", "Policy Privacy");
+		modelMap.put("cateTree", userService.getCategoryTree());
+		return "policy";
+	}
+	
+	/**
+	 * Term and Condition page
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "term", method = RequestMethod.GET)
+	public String termCondition(ModelMap modelMap) {
+		modelMap.put("title", "Terms and Conditions");
+		modelMap.put("cateTree", userService.getCategoryTree());
+		return "termcondition";
+	}
+	
+	/**
+	 * Shipping Method page
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "shipping", method = RequestMethod.GET)
+	public String shippingMethod(ModelMap modelMap) {
+		modelMap.put("title", "Shipping Methods");
+		modelMap.put("cateTree", userService.getCategoryTree());
+		return "shippingmethod";
+	}
+	
+	/**
+	 * Contact Us page
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "contactus", method = RequestMethod.GET)
+	public String contactUs(ModelMap modelMap) {
+		modelMap.put("title", "Contact Us");
+		modelMap.put("cateTree", userService.getCategoryTree());
+		return "contactus";
 	}
 	
 	/**
@@ -118,6 +172,10 @@ public class UserController {
 		
 	}
 	
+	/**
+	 * Product Detail page
+	 * @return
+	 */
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public String detail() {
 		return "detail";
