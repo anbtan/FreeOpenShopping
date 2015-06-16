@@ -28,6 +28,7 @@ public class UserController {
 	public String index(ModelMap modelMap) {
 		modelMap.put("title", "Free Open Shopping");
 		modelMap.put("cateTree", userService.getCategoryTree());
+		modelMap.put("productList", userService.getAllProduct());
 		return "index";
 	}
 
@@ -100,32 +101,34 @@ public class UserController {
 	public String signup(ModelMap modelMap) {
 		modelMap.put("objUser", new User());
 		modelMap.put("title", "Sign up");
-		modelMap.put("message", "");
 		return "signup";
 	}
 	
 	@RequestMapping(value = "signup", method = RequestMethod.POST)
 	public String signup(@ModelAttribute(value = "objUser") @Valid User objUser, BindingResult bindingResult,
 			ModelMap modelMap) {
+		// Validate input data
 		UserValidator userValidator = new UserValidator();
+		userValidator.setUserService(userService);
 		userValidator.validate(objUser, bindingResult);
 		if (bindingResult.hasErrors()) {
-			modelMap.put("message", "");
 			modelMap.put("title", "Sign up");
 			return "signup";
 		} else {
 			boolean result = false;
-			// Check the existing user first
-			boolean isExist = false;
-			isExist = userService.isExistedUser(objUser.getEmail());
-			if (!isExist) { // new user
-				result = userService.registerUser(objUser);
-			} else {
+			
+			// register this user
+			result = userService.registerUser(objUser);
+			
+			//if (!isExist) { // new user
+				
+			//} else {
 				// the existing user
-				modelMap.put("message", "The user is existed");
-				modelMap.put("title", "Sign up");
-				return "signup";
-			}
+				//modelMap.put("message", "The user is existed");
+				//modelMap.put("title", "Sign up");
+				//modelMap.put("collapse", "");
+				//return "signup";
+			//}
 			
 			if (result) { // register user successfully
 				// redirect to
@@ -133,6 +136,7 @@ public class UserController {
 			} else {
 				modelMap.put("message", "Failed to register user. Please try again!");
 				modelMap.put("title", "Sign up");
+				//modelMap.put("collapse", "");
 				return "signup";
 			}
 		}
@@ -148,7 +152,7 @@ public class UserController {
 		modelMap.put("objUser", new User("",""));
 		// Hide alert
 		modelMap.put("message", "");
-		modelMap.put("show", "collapse");
+		modelMap.put("collapse", "collapse");
 		modelMap.put("title", "Sign in");
 		return "signin";
 	}
@@ -165,7 +169,7 @@ public class UserController {
 		} else {
 			modelMap.put("title", "Sign in");
 			// Show alert
-			modelMap.put("show", "");
+			modelMap.put("collapse", "");
 			modelMap.put("message", "Login fail! Please try again!");
 			return "signin";
 		}
@@ -181,4 +185,29 @@ public class UserController {
 		return "detail";
 	}
 	
+	
+	@RequestMapping(value = "wishlist", method = RequestMethod.GET)
+	public String wishlist() {
+		return "wishlist";
+	}
+	
+	@RequestMapping(value = "shoppingcart", method = RequestMethod.GET)
+	public String shoppingcart() {
+		return "shoppingcart";
+	}
+	
+	@RequestMapping(value = "checkout", method = RequestMethod.GET)
+	public String checkout() {
+		return "checkout";
+	}
+	
+	
+	@RequestMapping(value="login", method = RequestMethod.GET)
+    public String loginError(@RequestParam(value = "error", required = false) String error,
+			ModelMap modelMap){
+		if (error != null) {
+			modelMap.put("error", "Invalid username and password!");
+		}
+        return "login";
+    }
 }

@@ -17,4 +17,8 @@ public interface UserService {
 	
 	public HashMap<Category, List<Category>> getCategoryTree();
 	
+	public List<Product> getAllProduct();
+	
+	public User getUserByUsername(String username);
+	
 }

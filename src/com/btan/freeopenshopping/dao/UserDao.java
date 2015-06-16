@@ -12,4 +12,9 @@ public interface UserDao {
 	
 	// Check the existing user
 	public boolean isExistedUser(String email);
+	
+	//
+	public User getUser(String email);
+	
+	public User getUserByUsername(String username);
 }

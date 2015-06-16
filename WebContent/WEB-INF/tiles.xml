@@ -9,8 +9,6 @@
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
     </definition>
     
-    
-    
     <definition name="news" template="/WEB-INF/jsp/templates/usertemplate.jsp">
         <put-attribute name="content" value="/WEB-INF/jsp/news.jsp" />
     </definition>
@@ -20,11 +18,13 @@
     </definition>
     
     
-    <definition name="signup" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+    <!-- Sign Up page -->
+    <definition name="signup" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/usersignup.jsp" />
     </definition>
     
-    <definition name="signin" template="/WEB-INF/jsp/templates/usertemplate.jsp">
+    <!-- Sign In page -->
+    <definition name="signin" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
     	<put-attribute name="content" value="/WEB-INF/jsp/usersignin.jsp" />
     </definition>
     
@@ -78,5 +78,26 @@
     <definition name="contactus" template="/WEB-INF/jsp/templates/usertemplate.jsp">
         <put-attribute name="content" value="/WEB-INF/jsp/contactus.jsp" />
     </definition>
+    
+    <!-- Wishlist -->
+    <definition name="wishlist" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/wishlist.jsp" />
+    </definition>
+    
+    <!-- Shopping Cart -->
+    <definition name="shoppingcart" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/shoppingcart.jsp" />
+    </definition>
+    
+    <!-- Checkout -->
+    <definition name="checkout" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
+        <put-attribute name="content" value="/WEB-INF/jsp/checkout.jsp" />
+    </definition>
+    
+    <!-- Login page -->
+    <definition name="login" template="/WEB-INF/jsp/templates/blanktemplate.jsp">
+    	<put-attribute name="content" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    
     
 </tiles-definitions>
